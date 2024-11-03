@@ -3,7 +3,7 @@ function getting(response) {
     let type = document.querySelector("#type");
     type.innerHTML = response.data.condition.description;
     let humidity = document.querySelector("#humidity");
-    let humiditySpeed = response.data.temperature.humidity / 100;
+    let humiditySpeed = response.data.temperature.humidity;
     humidity.innerHTML = `${humiditySpeed}%`;
     let wind = document.querySelector("#wind");
     wind.innerHTML = response.data.wind.speed;
