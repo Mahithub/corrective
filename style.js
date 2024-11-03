@@ -5,7 +5,7 @@ function getting(response) {
     let humidity = document.querySelector("#humidity");
     humidity.innerHTML = response.data.temperature.humidity;
     let wind = document.querySelector("#wind");
-    wind.innerHTML = `${response.data.wind.speed};
+    wind.innerHTML = `${response.data.wind.speed}%`;
     
     let temperaturCity = document.querySelector("#tempo");
     temperaturCity.innerHTML = `${Math.round(response.data.temperature.current)}`;
