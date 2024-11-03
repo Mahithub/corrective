@@ -3,10 +3,10 @@ function getting(response) {
     let type = document.querySelector("#type");
     type.innerHTML = response.data.condition.description;
     let humidity = document.querySelector("#humidity");
-    humidity.innerHTML = response.data.temperature.humidity;
+    let humiditySpeed = response.data.temperature.humidity / 100;
+    humidity.innerHTML = `${humiditySpeed.toFixed(2)}%`;
     let wind = document.querySelector("#wind");
-    let windSpeed = response.data.wind.speed / 100;
-    wind.innerHTML = `${windSpeed.toFixed(2)}%`;
+    wind.innerHTML = response.data.wind.speed;
     
     let temperaturCity = document.querySelector("#tempo");
     temperaturCity.innerHTML = `${Math.round(response.data.temperature.current)}`;
